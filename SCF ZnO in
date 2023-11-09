@@ -1,0 +1,33 @@
+&CONTROL
+calculation       = 'scf',
+prefix            = 'ZnO',
+restart_mode      = 'from_scratch',
+pseudo_dir        = '../Pseudo/',
+outdir            = './tmp/',
+/
+&SYSTEM
+ibrav             = 4,
+celldm(1)         = 6.08492054643342,
+celldm(3)         = 1.6149068322981400,
+nat               = 4,
+ntyp              = 2,
+nbnd              = 30,
+ecutwfc           = 100,
+ecutrho           = 1200,
+/
+&ELECTRONS
+conv_thr          = 1.0d-8,
+mixing_beta       = 0.5,
+/
+ATOMIC_SPECIES
+Zn 65.38  Zn.pbe-dnl-rrkjus_psl.1.0.0.UPF
+O  15.99  O.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal 
+Zn 0.333333 0.666667 0.000000
+Zn 0.666667 0.333333 0.500000
+O  0.333333 0.666667 0.375000
+O  0.666667 0.333333 0.875000
+
+K_POINTS automatic
+8 8 8 0 0 0
